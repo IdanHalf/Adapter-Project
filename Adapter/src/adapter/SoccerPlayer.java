@@ -18,14 +18,16 @@ public class SoccerPlayer extends Athlete {
 		return team;
 	}
 	public void setTeam(String team) {
-		if(team.length()>1)
+		if(team.length()>1) {
 			for(int i=0;i<team.length();i++)
 			{
-				if(!(team.toLowerCase().charAt(i)>'a')&&(team.toLowerCase().charAt(i)>'z'))
-					team="FCFalcons ";
+				if(!(team.toLowerCase().charAt(i)>'a')&&(team.toLowerCase().charAt(i)<'z'))
+					this.team="FCFalcons";
 			}
-		else
 			this.team=team;
+		}
+		else
+			this.team="FCFalcons";
 		
 	}
 	public int getBounce() {

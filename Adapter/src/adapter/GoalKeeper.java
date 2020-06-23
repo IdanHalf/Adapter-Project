@@ -17,13 +17,17 @@ public class GoalKeeper extends Athlete {
 		return team;
 	}
 	public void setTeam(String team) {
-		if(team.length()>1)
-			for(int i=0;i<team.length();i++)
-			{
-				if(!(team.toLowerCase().charAt(i)>'a')&&(team.toLowerCase().charAt(i)>'z'))
-					team="FCFalcons ";
+		if(team.length()<1) {
+			this.team="FCFalcons ";
+			return;
+		}
+		for(int i=0;i<team.length();i++)
+		{
+			if(!(team.toLowerCase().charAt(i)>'a')&&(team.toLowerCase().charAt(i)<'z')) {
+				team="FCFalcons ";
+				return;
 			}
-		else
+		}
 			this.team=team;
 		
 	}

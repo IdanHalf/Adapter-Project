@@ -17,13 +17,18 @@ public class BasketballPlayer extends Athlete {
 		return team;
 	}
 	public void setTeam(String team) {
-		if(team.length()>1)
+		if(team.length()<1) {
+			this.team="Golden State Warriors";
+			return;
+		}
 			for(int i=0;i<team.length();i++)
 			{
-				if(!(team.toLowerCase().charAt(i)>'a')&&(team.toLowerCase().charAt(i)>'z'))
-					team="Golden State Warriors ";
+				if(!(team.toLowerCase().charAt(i)>'a')&&(team.toLowerCase().charAt(i)<'z')) {
+					this.team="Golden State Warriors";
+					return;
+				}
 			}
-		else
+
 			this.team=team;
 	}
 	public boolean isDunk() {
