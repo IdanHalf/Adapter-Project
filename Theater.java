@@ -21,7 +21,7 @@ public class Theater extends Entertainer{
 			return;
 		}
 		for(int i=0;i<theater.length();i++)
-			if((theater1.charAt(i)<'a'||theater1.charAt(i)>'z')&&(theater1.charAt(i)<'A'||theater1.charAt(i)<'Z')){
+			if(!(theater1.toLowerCase().charAt(i)>'a'&&theater1.toLowerCase().charAt(i)<'z')){
 				theater ="Habima";
 				return;
 			}

@@ -21,7 +21,7 @@ public class Comedian extends Entertainer{
 			return;
 		}
 		for(int i=0;i<stage.length();i++)
-			if(stage.toLowerCase().charAt(i)>'a'||stage.toLowerCase().charAt(i)<'z')
+			if(!(stage.toLowerCase().charAt(i)>'a'&&stage.toLowerCase().charAt(i)<'z'))
 			{
 				this.stage="Heichal tarbot";
 				return;

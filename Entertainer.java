@@ -20,7 +20,7 @@ public class Entertainer {
 		}
 			for(int i=0;i<name.length();i++)
 			{
-				if(!(name.toLowerCase().charAt(i)>'a')&&(name.toLowerCase().charAt(i)>'z'))
+				if(!(name.toLowerCase().charAt(i)>'a')&&(name.toLowerCase().charAt(i)<'z'))
 				{
 					this.name="entertainer";
 					return;
