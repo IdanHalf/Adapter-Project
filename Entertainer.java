@@ -14,12 +14,19 @@ public class Entertainer {
 		return name;
 	}
 	public void setName(String name) {
-		if(name.length()>1)
+		if(name.length()<2) {
+			this.name="entertainer";
+			return;
+		}
 			for(int i=0;i<name.length();i++)
 			{
 				if(!(name.toLowerCase().charAt(i)>'a')&&(name.toLowerCase().charAt(i)>'z'))
-					name="entertainer";
+				{
+					this.name="entertainer";
+					return;
+				}
 			}
+			this.name=name;
 	}
 	public int getAge() {
 		return age;

@@ -17,7 +17,7 @@ public class GoalKeeper extends Athlete {
 		return team;
 	}
 	public void setTeam(String team) {
-		if(team.length()<1) {
+		if(team.length()<2) {
 			this.team="FCFalcons ";
 			return;
 		}
