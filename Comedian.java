@@ -3,7 +3,7 @@ package adapter;
 public class Comedian extends Entertainer{
 	private String special1;
 	private String special2;
-	public Comedian(String name,int age,char rating,String stage,String joke)
+	public Comedian(String name,int age,int rating,String stage,String joke)
 	{
 		super(name, age, rating);
 		setName(name);
