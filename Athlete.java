@@ -1,15 +1,17 @@
-package adapter;
+package Adapter;
 
 public class Athlete {
 	private String name;
 	private int age;
 	private double height;
 	private int rating;
-	public Athlete(String name,int age,double height,int rating){
+	private int donation;
+	public Athlete(String name,int age,double height,int rating,int donation){
 		setName(name);
 		setAge(age);
 		setHeight(height);
-		setRating(rating);	
+		setRating(rating);
+		setDonation(donation);
 	}
 	public String getName() {
 		return name;
@@ -63,6 +65,17 @@ public class Athlete {
 	@Override
 	public String toString() {
 		return "Athlete [name=" + name + ", age=" + age + ", height=" + height + ", rating=" + rating + "]";
+	}
+	public int getDonation() {
+		return donation;
+	}
+	public void setDonation(int donation) {
+		if(donation > 999 && donation < 20001)
+		{
+			this.donation=donation;
+		}
+		else
+			donation=1000;
 	}
 	
 
