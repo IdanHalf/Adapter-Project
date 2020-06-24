@@ -1,8 +1,8 @@
 package adapter;
 
 public class SoccerPlayer extends Athlete {
-	private String team;
-	private int bounce;
+	private String special1;
+	private int special2;
 	public SoccerPlayer(String name,int age,double height,int rating,String team,int bounce)
 	{
 		super(name,age,height,rating);
@@ -10,35 +10,40 @@ public class SoccerPlayer extends Athlete {
 		setAge(age);
 		setHeight(height);
 		setRating(rating);
-		setTeam(team);
-		setBounce(bounce);
+		setSpecial1(team);
+		setSpecial2(bounce);
 		
 	}
-	public String getTeam() {
-		return team;
+	public String getSpecial1() {
+		return special1;
 	}
-	public void setTeam(String team) {
+	public void setSpecial1(String team) {
 		if(team.length()<2) {
-			this.team="FCFalcons";
+			special1="FCFalcons";
 			return;
 		}
-			for(int i=0;i<team.length();i++)
+		for(int i=0;i<team.length();i++)
+		{
+			if((team.toLowerCase().charAt(i)<'a')||(team.toLowerCase().charAt(i)>'z'))
 			{
-				if(!(team.toLowerCase().charAt(i)>'a')&&(team.toLowerCase().charAt(i)<'z'))
-					this.team="FCFalcons";
+				if(team.charAt(i)!=' ')
+				{
+					special1="FCFalcons";
+					return;
+				}
 			}
-			this.team=team;
+		}
 		
-		this.team=team;
+		special1=team;
 		
 	}
-	public int getBounce() {
-		return bounce;
+	public int getSpecial2() {
+		return special2;
 	}
-	public void setBounce(int bounce) {
+	public void setSpecial2(int bounce) {
 		if(bounce>=0)
-			this.bounce=bounce;
+			special2=bounce;
 		else
-			bounce=0;
+			special2=0;
 	}
 }

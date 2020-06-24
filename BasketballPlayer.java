@@ -1,24 +1,24 @@
 package adapter;
 
 public class BasketballPlayer extends Athlete {
-	private String team;
-	private boolean dunk;
+	private String special1;
+	private boolean special2;
 	public BasketballPlayer(String name,int age,double height,int rating,String team,boolean dunk) {
 		super(name, age, height, rating);
 		setName(name);
 		setAge(age);
 		setHeight(height);
 		setRating(rating);
-		setTeam(team);
-		setDunk(dunk);
+		setSpecial1(team);
+		setSpecial2(dunk);
 		
 	}
-	public String getTeam() {
-		return team;
+	public String getSpecial1() {
+		return special1;
 	}
-	public void setTeam(String team) {
+	public void setSpecial1(String team) {
 		if(team.length()<2) {
-			this.team="Golden State Warriors";
+			special1="Golden State Warriors";
 			return;
 		}
 		for(int i=0;i<team.length();i++)
@@ -27,18 +27,18 @@ public class BasketballPlayer extends Athlete {
 			{
 				if(team.charAt(i)!=' ')
 				{
-					this.team="Golden State Warriors";
+					special1="Golden State Warriors";
 					return;
 				}
 			}
 		}
-			this.team=team;
+			special1=team;
 	}
-	public boolean isDunk() {
-		return dunk;
+	public boolean getSpecial2() {
+		return special2;
 	}
-	public void setDunk(boolean dunk) {
-		this.dunk = dunk;
+	public void setSpecial2(boolean dunk) {
+		special2 = dunk;
 	}
 	
 }

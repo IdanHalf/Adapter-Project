@@ -1,8 +1,8 @@
 package adapter;
 
 public class GoalKeeper extends Athlete {
-	private String team;
-	private int saves;
+	private String special1;
+	private int special2;
 	public GoalKeeper(String name,int age,double height,int rating,String team,int saves)
 	{
 		super(name,age,height,rating);
@@ -10,15 +10,15 @@ public class GoalKeeper extends Athlete {
 		setAge(age);
 		setHeight(height);
 		setRating(rating);
-		setTeam(team);
-		setSaves(saves);
+		setSpecial1(team);
+		setSpecial2(saves);
 	}
-	public String getTeam() {
-		return team;
+	public String getSpecial1() {
+		return special1;
 	}
-	public void setTeam(String team) {
+	public void setSpecial1(String team) {
 		if(team.length()<2) {
-			this.team="FCFalcons";
+			special1="FCFalcons";
 			return;
 		}
 		for(int i=0;i<team.length();i++)
@@ -27,22 +27,22 @@ public class GoalKeeper extends Athlete {
 			{
 				if(team.charAt(i)!=' ')
 				{
-					this.team="FCFalcons";
+					special1="FCFalcons";
 					return;
 				}
 			}
 		}
-			this.team=team;
+			special1=team;
 		
 	}
-	public int getSaves() {
-		return saves;
+	public int getSpecial2() {
+		return special2;
 	}
-	public void setSaves(int saves) {
+	public void setSpecial2(int saves) {
 		if(saves>=0)
-			this.saves=saves;
+			special2=saves;
 		else
-			saves=0;
+			special2=0;
 	}
 
 }

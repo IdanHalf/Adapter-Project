@@ -18,14 +18,17 @@ public class Entertainer {
 			this.name="entertainer";
 			return;
 		}
-			for(int i=0;i<name.length();i++)
+		for(int i=0;i<name.length();i++)
+		{
+			if((name.toLowerCase().charAt(i)<'a')||(name.toLowerCase().charAt(i)>'z'))
 			{
-				if(!(name.toLowerCase().charAt(i)>'a')&&(name.toLowerCase().charAt(i)<'z'))
+				if(name.charAt(i)!=' ')
 				{
 					this.name="entertainer";
 					return;
 				}
 			}
+		}
 			this.name=name;
 	}
 	public int getAge() {
@@ -44,7 +47,7 @@ public class Entertainer {
 		if(rating>='A'&& rating<='F')
 			this.rating=rating;
 		else
-			rating='D';
+			rating='F';
 	}
 	
 }
