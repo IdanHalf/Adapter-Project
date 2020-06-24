@@ -1,13 +1,15 @@
-package adapter;
+package Adapter;
 
 public class Entertainer {
 	private String name;
 	private int age;
 	private char rating;
-	public Entertainer(String name,int age,int rating){
+	private int donation;
+	public Entertainer(String name,int age,char rating,int donation){
 		setName(name);
 		setAge(age);
 		setRating(rating);
+		setDonation(donation);
 		
 	}
 	public String getName() {
@@ -43,21 +45,22 @@ public class Entertainer {
 	public char getRating() {
 		return rating;
 	}
-	public void setRating(int rating) {
-		if(rating<100&& rating>90)
-			this.rating='A';
-		if(rating<90&& rating>80)	
-			this.rating='B';
-		if(rating<80&& rating>70)
-			this.rating='C';
-		if(rating<70&& rating>60)
-			this.rating='D';
-		if(rating<60&& rating>50)
-			this.rating='E';
-		if(rating<50)
-			this.rating='F';
+	public void setRating(char rating) {
+		if(rating>='A'&& rating<='F')
+			this.rating=rating;
 		else
 			rating='F';
+	}
+	public int getDonation() {
+		return donation;
+	}
+	public void setDonation(int donation) {
+		if(donation > 999 && donation < 20001)
+		{
+			this.donation=donation;
+		}
+		else
+			donation=1000;
 	}
 	
 }
