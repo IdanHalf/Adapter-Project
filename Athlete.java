@@ -21,9 +21,13 @@ public class Athlete {
 		}
 		for(int i=0;i<name.length();i++)
 		{
-			if(!(name.toLowerCase().charAt(i)>'a')&&(name.toLowerCase().charAt(i)<'z')) {
-				this.name="athlete";
-				return;
+			if((name.toLowerCase().charAt(i)<'a')||(name.toLowerCase().charAt(i)>'z'))
+			{
+				if(name.charAt(i)!=' ')
+				{
+					this.name="athlete";
+					return;
+				}
 			}
 		}
 		this.name=name;
