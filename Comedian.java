@@ -45,7 +45,7 @@ public class Comedian extends Entertainer{
 		for(int i=0;i<joke.length();i++)
 			if((joke.toLowerCase().charAt(i)<'a')||(joke.toLowerCase().charAt(i)>'z'))
 			{
-				if(joke.charAt(i)!=' ')
+				if(joke.charAt(i)!=' '&& joke.charAt(i)!='?')
 				{
 					special2="What's the best thing about Switzerland? I don't know, but the flag is a big plus.";
 					return;
