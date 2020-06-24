@@ -1,11 +1,11 @@
-package adapter;
+package Adapter;
 
 public class GoalKeeper extends Athlete {
 	private String special1;
 	private int special2;
-	public GoalKeeper(String name,int age,double height,int rating,String team,int saves)
+	public GoalKeeper(String name,int age,double height,int rating, int donation,String team,int saves)
 	{
-		super(name,age,height,rating);
+		super(name,age,height,rating,donation);
 		setName(name);
 		setAge(age);
 		setHeight(height);

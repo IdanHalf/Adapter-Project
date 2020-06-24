@@ -1,10 +1,10 @@
-package adapter;
+package Adapter;
 
 public class BasketballPlayer extends Athlete {
 	private String special1;
 	private boolean special2;
-	public BasketballPlayer(String name,int age,double height,int rating,String team,boolean dunk) {
-		super(name, age, height, rating);
+	public BasketballPlayer(String name,int age,double height,int rating,int donation ,String team,boolean dunk) {
+		super(name, age, height, rating, donation);
 		setName(name);
 		setAge(age);
 		setHeight(height);
@@ -39,6 +39,10 @@ public class BasketballPlayer extends Athlete {
 	}
 	public void setSpecial2(boolean dunk) {
 		special2 = dunk;
+	}
+	public char[] isDunk() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
