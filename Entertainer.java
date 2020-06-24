@@ -60,7 +60,7 @@ public class Entertainer {
 			this.donation=donation;
 		}
 		else
-			donation=1000;
+			this.donation=1000;
 	}
 	
 }
