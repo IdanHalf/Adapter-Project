@@ -18,6 +18,9 @@ public class BasketballPlayerAdapter implements AllPlayerAdapter{
 	public String getRating() {
 		return String.valueOf(basketballPlayer.getRating());
 	}
+	public String getDonation() {
+		return String.valueOf(basketballPlayer.getDonation());
+		}
 	public String getSpecial1() {
 		return basketballPlayer.getSpecial1();
 	}

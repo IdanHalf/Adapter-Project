@@ -20,6 +20,9 @@ public class TheaterAdapter implements AllPlayerAdapter {
 	public String getRating() {
 		return String.valueOf(actor.getRating());
 	}
+	public String getDonation() {
+		return String.valueOf(actor.getDonation());
+		}
 
 	public String getSpecial1() {
 		return actor.getSpecial1();

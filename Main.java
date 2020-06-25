@@ -12,37 +12,46 @@ public class Main {
 	public static void main(String[] args) {
 		Random generate=new Random();
 		AllPlayerAdapter [] donators=new AllPlayerAdapter[10];
+		int allsum=0,soccersum=0,goalsum=0,basketsum=0,theatersum=0,comediansum=0;
 		int i=0;
 		while(i<10)
 		{
-			int num=(generate.nextInt(6)+1);
+			int num=(generate.nextInt(5)+1);
 			if(num==1)
 			{
-				donators[i]=new SoccerPlayerAdapter(new SoccerPlayer(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextDouble()+1), (generate.nextInt(100)+1), (generate.nextInt(20000)+1000), teams[generate.nextInt(teams.length)], generate.nextInt()));
-				i++;
+				donators[i]=new SoccerPlayerAdapter(new SoccerPlayer(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextDouble()+1), (generate.nextInt(100)+1), (generate.nextInt(19000)+1000), teams[generate.nextInt(teams.length)], generate.nextInt()));
+				soccersum+=Integer.parseInt(donators[i].getDonation());
+				
 			}
 			else if(num==2)
 			{
-				donators[i]=new GoalKeeperAdapter(new GoalKeeper(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextDouble()+1), (generate.nextInt(100)+1), (generate.nextInt(20000)+1000), teams[generate.nextInt(teams.length)], generate.nextInt()));
-				i++;
+				donators[i]=new GoalKeeperAdapter(new GoalKeeper(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextDouble()+1), (generate.nextInt(100)+1), (generate.nextInt(19000)+1000), teams[generate.nextInt(teams.length)], generate.nextInt()));
+				goalsum+=Integer.parseInt(donators[i].getDonation());
 			}
 			else if(num==3)
 			{
-				donators[i]=new BasketballPlayerAdapter(new BasketballPlayer(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextDouble()+1), (generate.nextInt(100)+1), (generate.nextInt(20000)+1000), teams[generate.nextInt(teams.length)], generate.nextBoolean()));
-				i++;
+				donators[i]=new BasketballPlayerAdapter(new BasketballPlayer(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextDouble()+1), (generate.nextInt(100)+1), (generate.nextInt(19000)+1000), teams[generate.nextInt(teams.length)], generate.nextBoolean()));
+				basketsum+=Integer.parseInt(donators[i].getDonation());
 			}
 			else if(num==4)
 			{
-				donators[i]=new TheaterAdapter(new Theater(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextInt(100)+1),(generate.nextInt(20000)+1000), stages[generate.nextInt(stages.length)],quotes[generate.nextInt(quotes.length)]) );
-				i++;
+				donators[i]=new TheaterAdapter(new Theater(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextInt(100)+1),(generate.nextInt(19000)+1000), stages[generate.nextInt(stages.length)],quotes[generate.nextInt(quotes.length)]) );
+				theatersum+=Integer.parseInt(donators[i].getDonation());
 			}
 			else if(num==5)
 			{
-				donators[i]=new ComedianAdapter(new Comedian(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextInt(100)+1), (generate.nextInt(20000)+1000), stages[generate.nextInt(stages.length)],jokes[generate.nextInt(jokes.length)] ));
-				i++;
+				donators[i]=new ComedianAdapter(new Comedian(names[generate.nextInt(names.length)], generate.nextInt(), (generate.nextInt(100)+1), (generate.nextInt(19000)+1000), stages[generate.nextInt(stages.length)],jokes[generate.nextInt(jokes.length)]));
+				comediansum+=Integer.parseInt(donators[i].getDonation());
 			}
+			System.out.println(donators[i].getDonation());
+			allsum+=Integer.parseInt(donators[i].getDonation());
+			i++;
 		}
-		for(i=0;i<donators.length;i++)
-			donators[i].print();
+		System.out.println("soccer players donated tonigh an amount of:"+soccersum+
+				",goalkeepers donated tonigh an amount of: "+goalsum+
+				",basketball players donated tonigh an amount of: "+basketsum+
+				"theater actors donated tonigh an amount of: "+theatersum+
+				"comedians donated tonigh an amount of: "+comediansum);
+		
 	}
 }

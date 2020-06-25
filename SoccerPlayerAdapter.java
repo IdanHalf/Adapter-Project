@@ -21,6 +21,9 @@ public class SoccerPlayerAdapter implements AllPlayerAdapter{
 	public String getRating() {
 		return String.valueOf(soccerPlayer.getRating());
 	}
+	public String getDonation() {
+	return String.valueOf(soccerPlayer.getDonation());
+	}
 
 	public String getSpecial1() {
 		return soccerPlayer.getSpecial1();
@@ -32,5 +35,6 @@ public class SoccerPlayerAdapter implements AllPlayerAdapter{
 	public void print() {
 		System.out.println("name="+getName()+" age="+getAge()+" height="+getHeight()+" rating="+getRating()+" trait1="+getSpecial1()+" trait2="+getSpecial2());	
 	}
+	
 
 }

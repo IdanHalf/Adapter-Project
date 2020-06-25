@@ -20,6 +20,9 @@ public class ComedianAdapter implements AllPlayerAdapter{
 	public String getRating() {
 		return String.valueOf(comedian.getRating());
 	}
+	public String getDonation() {
+		return String.valueOf(comedian.getDonation());
+		}
 
 	public String getSpecial1() {
 		return comedian.getSpecial1();

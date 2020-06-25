@@ -18,6 +18,9 @@ public class GoalKeeperAdapter implements AllPlayerAdapter {
 	public String getRating() {
 		return String.valueOf(goalKeeper.getRating());
 	}
+	public String getDonation() {
+		return String.valueOf(goalKeeper.getDonation());
+		}
 	public String getSpecial1() {
 		return goalKeeper.getSpecial1();
 	}
