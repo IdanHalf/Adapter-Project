@@ -40,21 +40,21 @@ public class Entertainer {
 		if(age>17&&age<66)
 			this.age=age;
 		else
-			age=25;
+			this.age=25;
 	}
 	public char getRating() {
 		return rating;
 	}
 	public void setRating(int rating) {
-		if(rating<100&&rating>90)
+		if(rating<=100&&rating>=90)
 			this.rating='A';
-		if(rating<90&&rating>80)
+		else if(rating<=90&&rating>=80)
 			this.rating='B';
-		if(rating<80&&rating>70)
+		else if(rating<=80&&rating>=70)
 			this.rating='C';
-		if(rating<70&&rating>60)
+		else if(rating<=70&&rating>=60)
 			this.rating='D';
-		if(rating<600&&rating>50)
+		else if(rating<=60&&rating>=50)
 			this.rating='E';
 		else
 			rating='F';

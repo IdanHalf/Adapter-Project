@@ -39,7 +39,7 @@ public class GoalKeeper extends Athlete {
 		return special2;
 	}
 	public void setSpecial2(int saves) {
-		if(saves>=0)
+		if(saves>=0&&saves<=500)
 			special2=saves;
 		else
 			special2=0;

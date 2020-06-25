@@ -24,4 +24,7 @@ public class BasketballPlayerAdapter implements AllPlayerAdapter{
 	public String getSpecial2() {
 		return String.valueOf(basketballPlayer.getSpecial2());
 	}
+	public void print() {
+		System.out.println("name="+getName()+" age="+getAge()+" height="+getHeight()+" rating="+getRating()+" trait1="+getSpecial1()+" trait2="+getSpecial2());	
+	}
 }

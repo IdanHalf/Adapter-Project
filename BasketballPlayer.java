@@ -40,9 +40,4 @@ public class BasketballPlayer extends Athlete {
 	public void setSpecial2(boolean dunk) {
 		special2 = dunk;
 	}
-	public char[] isDunk() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 }

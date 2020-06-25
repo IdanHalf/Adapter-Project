@@ -62,11 +62,6 @@ public class Athlete {
 		else
 			this.rating=50;
 	}
-	@Override
-	public String toString() {
-		return "Athlete [name=" + name + ", age=" + age + ", height=" + height + ", rating=" + rating + ", donation="
-				+ donation + "]";
-	}
 	public int getDonation() {
 		return donation;
 	}

@@ -7,5 +7,5 @@ public interface AllPlayerAdapter {
 	public String getRating();
 	public String getSpecial1();
 	public String getSpecial2();
-		
+	public void print();	
 }

@@ -41,7 +41,7 @@ public class SoccerPlayer extends Athlete {
 		return special2;
 	}
 	public void setSpecial2(int bounce) {
-		if(bounce>=0)
+		if(bounce>=0&&bounce<=200)
 			special2=bounce;
 		else
 			special2=0;
