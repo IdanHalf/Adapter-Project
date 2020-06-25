@@ -1,4 +1,4 @@
-package Adapter;
+package adapter;
 
 public class Comedian extends Entertainer{
 	private String special1;

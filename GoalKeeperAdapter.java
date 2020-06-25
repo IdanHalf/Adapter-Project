@@ -1,4 +1,4 @@
-package Adapter;
+package adapter;
 
 public class GoalKeeperAdapter implements AllPlayerAdapter {
 	GoalKeeper goalKeeper;

@@ -1,4 +1,4 @@
-package Adapter;
+package adapter;
 
 public class GoalKeeper extends Athlete {
 	private String special1;

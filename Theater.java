@@ -1,9 +1,9 @@
-package Adapter;
+package adapter;
 
 public class Theater extends Entertainer{
 	private String special1;
 	private String special2;
-	public Theater(String name,int age,char rating, int donation,String theater,String quote)
+	public Theater(String name,int age,int rating, int donation,String theater,String quote)
 	{
 		super(name, age, rating,donation);
 		setName(name);
