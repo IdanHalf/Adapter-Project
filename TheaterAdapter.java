@@ -32,6 +32,6 @@ public class TheaterAdapter implements AllPlayerAdapter {
 		return String.valueOf(actor.getSpecial2());
 	}
 	public void print() {
-		System.out.println("name="+getName()+" age="+getAge()+" height="+getHeight()+" rating="+getRating()+" trait1="+getSpecial1()+" trait2="+getSpecial2());	
+		System.out.println("Hi i donated: "+getDonation()+"$ my name is: "+getName()+", i am "+getAge()+" years old, my height is "+getHeight()+", my rating is: "+getRating()+", im an actor at: "+getSpecial1()+" and my quote is: "+getSpecial2());	
 	}
 }

@@ -32,6 +32,6 @@ public class ComedianAdapter implements AllPlayerAdapter{
 		return String.valueOf(comedian.getSpecial2());
 	}
 	public void print() {
-		System.out.println("name="+getName()+" age="+getAge()+" height="+getHeight()+" rating="+getRating()+" trait1="+getSpecial1()+" trait2="+getSpecial2());	
+		System.out.println("Hi i donated: "+getDonation()+"$ my name is: "+getName()+", i am "+getAge()+" years old, my height is "+getHeight()+", my rating is: "+getRating()+", im a comedian performing at: "+getSpecial1()+" and my signature joke is: "+getSpecial2());	
 	}
 }

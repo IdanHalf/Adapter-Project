@@ -28,6 +28,11 @@ public class BasketballPlayerAdapter implements AllPlayerAdapter{
 		return String.valueOf(basketballPlayer.getSpecial2());
 	}
 	public void print() {
-		System.out.println("name="+getName()+" age="+getAge()+" height="+getHeight()+" rating="+getRating()+" trait1="+getSpecial1()+" trait2="+getSpecial2());	
+		System.out.print("Hi i donated: "+getDonation()+"$ my name is: "+getName()+", i am "+getAge()+" years old, my height is "+getHeight()+"m, my rating is: "+getRating()+", i play basketball for the: "+getSpecial1()+" and i ");	
+		if(getSpecial2().equals("true"))
+			System.out.println("can dunk");
+		else
+			System.out.println("cant dunk");
+			
 	}
 }

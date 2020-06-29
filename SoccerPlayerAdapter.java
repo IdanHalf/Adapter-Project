@@ -33,7 +33,7 @@ public class SoccerPlayerAdapter implements AllPlayerAdapter{
 		return String.valueOf(soccerPlayer.getSpecial2());
 	}
 	public void print() {
-		System.out.println("name="+getName()+" age="+getAge()+" height="+getHeight()+" rating="+getRating()+" trait1="+getSpecial1()+" trait2="+getSpecial2());	
+		System.out.println("Hi i donated: "+getDonation()+"$ my name is: "+getName()+", i am "+getAge()+" years old, my height is "+getHeight()+"m, my rating is: "+getRating()+", i play soccer for the: "+getSpecial1()+" and i can bounce the ball "+getSpecial2()+" times");	
 	}
 	
 

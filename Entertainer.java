@@ -57,7 +57,7 @@ public class Entertainer {
 		else if(rating<=60&&rating>=50)
 			this.rating='E';
 		else
-			rating='F';
+			this.rating='F';
 	}
 	public int getDonation() {
 		return donation;
